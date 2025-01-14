@@ -1,0 +1,92 @@
+site_name: PAN-OS Duplicate Finder
+site_description: A command-line tool to find duplicate address objects across PAN-OS device groups
+site_author: Calvin Remsburg
+repo_url: https://github.com/cdot65/pan-os-duplicate-finder
+repo_name: cdot65/pan-os-duplicate-finder
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          rendering:
+            show_source: true
+  - termynal
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - def_list
+  - footnotes
+  - pymdownx.arithmatex
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - User Guide:
+      - Getting Started: user-guide/getting-started.md
+      - Installation: user-guide/installation.md
+      - Configuration: user-guide/configuration.md
+      - Usage Examples: user-guide/examples.md
+  - Reference:
+      - CLI Commands: reference/commands.md
+      - Settings File: reference/settings.md
+      - Output Formats: reference/output-formats.md
+  - Development:
+      - Contributing: development/contributing.md
+      - Development Setup: development/setup.md
+      - Testing: development/testing.md
+  - About:
+      - Release Notes: about/changelog.md
+      - License: about/license.md

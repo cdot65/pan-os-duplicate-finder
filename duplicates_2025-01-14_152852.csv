@@ -1,0 +1,10 @@
+address_value,address_type,object_name,device_group,duplicate_group,description
+1.1.1.1/32,ip-netmask,duplicate test 1,shared,Group_1,located in the shared group
+1.1.1.1/32,ip-netmask,duplicate test 5,shared,Group_1,located in the shared group
+1.1.1.1/32,ip-netmask,duplicate test 2,LAB_DG,Group_1,located in the shared group
+1.1.1.1/32,ip-netmask,duplicate test 4,WOODLANDS_DG,Group_1,located in the shared group
+1.1.1.1/32,ip-netmask,duplicate test 6,WOODLANDS_DG,Group_1,located in the shared group
+1.1.1.1/32,ip-netmask,duplicate test 3,DALLAS_DG,Group_1,located in the shared group
+1.1.1.1/32,ip-netmask,duplicate test 7,DALLAS_DG,Group_1,located in the shared group
+192.168.1.0/24,ip-netmask,AWS_VPC_NETWORK1,LAB_DG,Group_2,DMZ network prefix
+192.168.1.0/24,ip-netmask,DMZ_NETWORK,LAB_DG,Group_2,DMZ network prefix

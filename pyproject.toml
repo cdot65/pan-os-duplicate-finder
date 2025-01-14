@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "pan-os-duplicate-finder"
+version = "0.1.0"
+description = "A command-line tool to find duplicate address objects across PAN-OS device groups"
+authors = ["Calvin Remsburg <cremsburg.dev@gmail.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+packages = [{include = "pan_os_duplicate_finder"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.9.0"}
+pan-os-python = "^1.11.0"
+pandas = "^2.2.0"
+tabulate = "^0.9.0"
+pyyaml = "^6.0.1"
+rich = "^13.7.0"
+setuptools = "^75.8.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+flake8 = "^7.1.1"
+mkdocs = "^1.6.1"
+mkdocs-material = "^9.5.39"
+mkdocstrings = "^0.26.1"
+pytest = "^8.3.3"
+factory-boy = "^3.3.1"
+termynal = "^0.12.1"
+mypy = "^1.8.0"
+isort = "^5.13.0"
+
+[tool.poetry.scripts]
+pan-os-duplicate-finder = "pan_os_duplicate_finder.main:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
